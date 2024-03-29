@@ -1,0 +1,19 @@
+diff --git a/Makefile b/Makefile
+index 7b08c49..a8a6296 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,5 @@
+ 
+-SUBDIRS =  misc-progs misc-modules \
+-           skull scull scullc scullp lddbus sculld scullv shortprint simple tty \
+-	   pci usb\
+-	   sbull snull short
++SUBDIRS = misc-modules scull
+ 
+ all: subdirs
+ 
+@@ -11,3 +8,4 @@ subdirs:
+ 
+ clean:
+ 	for n in $(SUBDIRS); do $(MAKE) -C $$n clean; done
++
