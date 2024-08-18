@@ -1,0 +1,22 @@
+diff --git a/Makefile b/Makefile
+index e4cd5ca..dc7fbc1 100644
+--- a/Makefile
++++ b/Makefile
+@@ -17,11 +17,14 @@ obj-m	:= aesdchar.o
+ aesdchar-y := aesd-circular-buffer.o main.o
+ else
+ 
+-KERNELDIR ?= /lib/modules/$(shell uname -r)/build
++KERNEL_SRC ?= /lib/modules/$(shell uname -r)/build
+ PWD       := $(shell pwd)
+ 
+-modules:
+-	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
++all:
++	$(MAKE) -C $(KERNEL_SRC) M=$(PWD)
++
++modules_instal:
++	$(MAKE) -C $(KERNEL_SRC) M=$(PWD) modules_install
+ 
+ endif
+ 
