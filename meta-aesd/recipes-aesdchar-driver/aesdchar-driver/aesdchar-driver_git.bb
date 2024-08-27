@@ -7,12 +7,12 @@
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-SRC_URI = "gitsm://github.com/cu-ecen-aeld/assignments-3-and-later-Mo2meN-Ali;protocol=https;branch=master \
+SRC_URI = "gitsm://github.com/cu-ecen-aeld/assignments-3-and-later-Mo2meN-Ali;protocol=https;branch=ass-9 \
            file://001-Makefile.patch"
 
 # Modify these as desired
 PV = "1.0+git${SRCPV}"
-SRCREV = "f571429d9224480843953eb47f78ab03ae2dfa4b"
+SRCREV = "ce6e92447a29a645276a1d2149d7f6c30de214a1"
 
 S = "${WORKDIR}/git/aesd-char-driver"
 
